@@ -184,6 +184,11 @@ namespace Proyecto_Clinica_L3CS
 
             }
         }
+
+        private void EspecialidadComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
      

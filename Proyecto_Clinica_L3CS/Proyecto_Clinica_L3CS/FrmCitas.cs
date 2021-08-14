@@ -14,5 +14,30 @@ namespace Proyecto_Clinica_L3CS
         {
             InitializeComponent();
         }
+
+        public string CodigoPaciente;
+ 
+        BaseDatos bd = new BaseDatos();
+
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            FrmBuscarPaciente formulario = new FrmBuscarPaciente();
+            formulario.ShowDialog();
+            NombreTextBox.Text = formulario.Nombre;
+        }
+
+        private void LlenarCategorias()
+        {
+            BaseDatos BD = new BaseDatos();
+            EspecialidadCitaComboBox.DataSource = BD.CargarEspecialidades();
+            EspecialidadCitaComboBox.DisplayMember = "ESPECIALIDAD";
+            EspecialidadCitaComboBox.ValueMember = "ID";
+        }
+
+        private void FrmCitas_Load(object sender, EventArgs e)
+        {
+            LlenarCategorias();
+        }
     }
 }

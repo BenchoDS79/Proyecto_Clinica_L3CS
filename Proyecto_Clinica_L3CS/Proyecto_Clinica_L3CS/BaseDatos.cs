@@ -553,6 +553,34 @@ namespace Proyecto_Clinica_L3CS
             return miLista;
         }
 
+        public DataTable SeleccionarPacientesParaCitaPorNombre(string nombre)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                StringBuilder consultaSQL = new StringBuilder();
+
+                consultaSQL.Append(" SELECT * FROM PACIENTES WHERE NOMBRE LIKE ('%" + nombre + "%') ");
+
+                using (SqlConnection _conexion = new SqlConnection(cadena))
+                {
+                    _conexion.Open();
+                    using (SqlCommand comando = new SqlCommand(consultaSQL.ToString(), _conexion))
+                    {
+                        comando.CommandType = CommandType.Text;
+                        SqlDataReader dr = comando.ExecuteReader();
+                        tabla.Load(dr);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+
+            return tabla;
+        } 
+
 
     } 
 }

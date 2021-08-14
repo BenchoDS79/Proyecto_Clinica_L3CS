@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.EspecialidadComboBox = new System.Windows.Forms.ComboBox();
+            this.EspecialidadCitaComboBox = new System.Windows.Forms.ComboBox();
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.CitaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DoctorTextBox = new System.Windows.Forms.TextBox();
@@ -89,13 +89,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(488, 193);
             this.dataGridView1.TabIndex = 4;
             // 
-            // EspecialidadComboBox
+            // EspecialidadCitaComboBox
             // 
-            this.EspecialidadComboBox.FormattingEnabled = true;
-            this.EspecialidadComboBox.Location = new System.Drawing.Point(313, 25);
-            this.EspecialidadComboBox.Name = "EspecialidadComboBox";
-            this.EspecialidadComboBox.Size = new System.Drawing.Size(156, 21);
-            this.EspecialidadComboBox.TabIndex = 5;
+            this.EspecialidadCitaComboBox.FormattingEnabled = true;
+            this.EspecialidadCitaComboBox.Location = new System.Drawing.Point(313, 25);
+            this.EspecialidadCitaComboBox.Name = "EspecialidadCitaComboBox";
+            this.EspecialidadCitaComboBox.Size = new System.Drawing.Size(156, 21);
+            this.EspecialidadCitaComboBox.TabIndex = 5;
             // 
             // NombreTextBox
             // 
@@ -167,6 +167,7 @@
             this.BuscarButton.TabIndex = 13;
             this.BuscarButton.Text = "Buscar Paciente";
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // FrmCitas
             // 
@@ -181,7 +182,7 @@
             this.Controls.Add(this.DoctorTextBox);
             this.Controls.Add(this.CitaDateTimePicker);
             this.Controls.Add(this.NombreTextBox);
-            this.Controls.Add(this.EspecialidadComboBox);
+            this.Controls.Add(this.EspecialidadCitaComboBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -189,6 +190,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCitas";
             this.Text = "Citas";
+            this.Load += new System.EventHandler(this.FrmCitas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,7 +204,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox EspecialidadComboBox;
+        private System.Windows.Forms.ComboBox EspecialidadCitaComboBox;
         private System.Windows.Forms.TextBox NombreTextBox;
         private System.Windows.Forms.DateTimePicker CitaDateTimePicker;
         private System.Windows.Forms.TextBox DoctorTextBox;

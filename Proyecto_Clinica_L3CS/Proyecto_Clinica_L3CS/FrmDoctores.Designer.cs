@@ -147,6 +147,7 @@
             this.EspecialidadComboBox.Name = "EspecialidadComboBox";
             this.EspecialidadComboBox.Size = new System.Drawing.Size(202, 24);
             this.EspecialidadComboBox.TabIndex = 9;
+            this.EspecialidadComboBox.SelectedIndexChanged += new System.EventHandler(this.EspecialidadComboBox_SelectedIndexChanged);
             // 
             // DoctoresDataGridView
             // 

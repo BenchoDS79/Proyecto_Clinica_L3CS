@@ -14,5 +14,10 @@ namespace Proyecto_Clinica_L3CS
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

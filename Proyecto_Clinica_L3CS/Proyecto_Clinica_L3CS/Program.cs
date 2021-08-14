@@ -15,7 +15,7 @@ namespace Proyecto_Clinica_L3CS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal ());
+            Application.Run(new FrmLogin ());
         }
     }
 }
